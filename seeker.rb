@@ -96,4 +96,4 @@ def display(ranking)
                                data: rows.map{ |x, y| [y, x.url]}).to_text
   rows
 end  
-#search("computer science","freq")
+#search("computer science","dist")

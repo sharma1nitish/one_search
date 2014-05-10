@@ -10,9 +10,9 @@
       %form{ action: '/search', method: 'post' }
         %input{ type: 'text', name: 'query' }
         %input{ type: 'submit', value: 'Search', class: 'button' }
-        %input{:type => 'checkbox', :name => 'algo', :value => "freq"} Freq
-        %input{:type => 'checkbox', :name => 'algo', :value => "loc"} Loc
-        %input{:type => 'checkbox', :name => 'algo', :value => "dist"} Dist
+        %input{:type => 'radio', :name => 'algo', :value => "freq"} Frequency Ranking
+        %input{:type => 'radio', :name => 'algo', :value => "loc"} Location Ranking
+        %input{:type => 'radio', :name => 'algo', :value => "dist"} Distance Ranking
     - if @results and not @results.empty?
       #results
         - @results.each do |link, score|
