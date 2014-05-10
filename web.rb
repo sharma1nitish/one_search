@@ -8,6 +8,7 @@ get '/' do
 end
 
 post '/search' do
-  @results = search(params[:query])
+  @results = search(params[:query], params[:algo])
+  #puts params
   haml :index
 end
